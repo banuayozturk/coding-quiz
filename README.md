@@ -1,7 +1,6 @@
 # coding-quiz
 
-## Deployed Application: 
-
+## Deployed Application: https://banuayozturk.github.io/coding-quiz/
 ## Description: 
 Are you ready to take a quiz!
 
