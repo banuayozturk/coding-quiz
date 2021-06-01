@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-us">
+   <!-- Character set, viewport settings , style sheets and title are located in the head tag -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Coding Quiz Challenge - Test your knowledge!</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-div">
+            <h1 class="large-font">Coding Quiz Challenge</h1>
+        </div>
+    </header>
+
+    <main>
+        <!--Questions Box, Start Button, Submit Button Codes are Here-->
+        <section>
+            <div class="card quiz ">
+                <div id="quiz" class="quiz">
+                    <p>
+                        Try to answer the following code-related questions within the time limit.
+                        Keep in mind that incorrect answers will penalize your score-time by ten seconds.
+                    </p>
+                    <button class="start-button" onclick='startTimer()'>Start</button>
+                </div>
+                <div id="questions" class="questions">
+                    <h2 id="test_status"></h2>
+                    <div id="test"></div>
+                    <div id="div1" class="hide">
+                        <hr>
+                        <p>Correct</p>
+                    </div>
+                    <div id="div2" class="hide">
+                        <hr>
+                        <p>Wrong</p>
+                    </div>
+                    <div id='score-list' class='list'>
+                        <p id="demo"></p>
+                        <input type="text" id="myText" value="Initials">
+                        <button class="start-button" onclick='makeList()'>Submit</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <!--Timer and Reset Button Codes are Here-->
+            <div class="card timer">
+                <div class="result">
+
+                    <button class="reset-button" onclick="reset()">Reset</button>
+                </div>
+                <div class="timer-text">
+                    <div class="large-font timer-element">60</div>
+                    <h3>seconds remaining</h3>
+                    <div class="timer">
+                    </div>
+                </div>
+        </section>
+
+    </main>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
