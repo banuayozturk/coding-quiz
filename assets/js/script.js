@@ -26,7 +26,6 @@ function startTimer() {
 }
 function makeList() {
     var x = document.getElementById("myText").value;
-    console.log(x);
     document.getElementById(
       "demo").innerHTML = "<table style='width:100%'><tr><th>Name</th><th>Score</th><th>Time Score</th></tr><tr style='color: rgb(228, 217, 203)'><th>" 
       + x + "</th><th>" 
