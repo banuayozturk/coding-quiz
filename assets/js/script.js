@@ -8,7 +8,6 @@ var questionDiv = document.querySelector(".questions");
 var timer;
 var timerCount = 60;
 
-
 //Timer Function
 function startTimer() {
     timer = setInterval(function() {
@@ -19,11 +18,11 @@ function startTimer() {
           alert("time is done");
         }
       }, 1000);
-      
-
+      //when start the quiz, description getting hide and questions getting show
     document.getElementById('quiz').style.display = 'none';
     document.getElementById('questions').style.display = 'block';
 }
+//Gets Value from Input and Makes a List.
 function makeList() {
     var x = document.getElementById("myText").value;
     document.getElementById(
@@ -32,7 +31,7 @@ function makeList() {
       + score + "</th><th>" 
       + timerCount + "</th></tr></table>";
 }
-
+//Refreshes the Page When Reset Button is Clicked.
 function reset(){
     location.reload();
 }
@@ -90,7 +89,6 @@ function reset(){
         get("test_status").innerHTML = "Quiz completed";
         document.getElementById('score-list').style.display = "block";
         clearInterval(timer);
-        
 
         // Resests the Variable
         pos = 0;
@@ -100,7 +98,6 @@ function reset(){
       }
       get("test_status").innerHTML = "Question "+(pos+1)+" of "+questions.length;
 
-      
       question = questions[pos].question;
       chA = questions[pos].a;
       chB = questions[pos].b;
@@ -135,9 +132,9 @@ function reset(){
         timerCount-=10;
         document.getElementById('div2').style.display ='block';
       }
-      
       pos++;
       
+      //Next Question Comes within a Second When User Answers a Question.
       setTimeout(function(){
         renderQuestion();
       }, 1000); 
